@@ -30,7 +30,8 @@
         "clocks.h": "c",
         "stdio.h": "c",
         "stdint.h": "c",
-        "textfonts.h": "c"
+        "textfonts.h": "c",
+        "irq.h": "c"
     },
     "cmake.configureOnOpen": true
 }

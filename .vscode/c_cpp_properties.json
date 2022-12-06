@@ -6,13 +6,15 @@
                 "${workspaceFolder}/**",
                 "/home/nanith/raspberry-pi-pico/**",
                 "${workspaceFolder}/lib-st7735/include",
-                "/home/nanith/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+                "/home/nanith/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_spi/include",
+                "/home/nanith/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

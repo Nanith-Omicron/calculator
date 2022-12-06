@@ -26,7 +26,8 @@ int systemInit()
     // Set clock speed to default 40 mhz
     
     printf("System Init.\n");
-    changeClockSpeed(133);
+   // set_sys_clock_khz(140000, true);
+   // changeClockSpeed(64);
     sleep_ms(50);
     measure_freqs();
 }
@@ -44,6 +45,7 @@ int main()
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
     printf("Le Ghanais started.\n");
+    
     sleep_ms(50);
 
     printf("Main Thread Starting.\n");

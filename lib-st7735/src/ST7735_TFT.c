@@ -319,23 +319,16 @@ void fillRectangle(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color)
 
 void drawBuffer(uint16_t *_buf)
 {
-  uint8_t hi, lo;
-
-
   setAddrWindow(0, 0, 0 + _width - 1, 0 + _height - 1);
-  
   tft_dc_high();
   tft_cs_low();
-  for (int y = _height; y > 0; y--)
+
+  int line[_width];
+  for (int i = 0; i < _width * _height; i++)
   {
-    for (int x = _width; x > 0; x--)
-    {
-      uint16_t col = &_buf[y * _height + x];
-      hi = (uint8_t)(col >> 8);
-      lo =(uint8_t)col;
-      spiwrite(hi);
-      spiwrite(lo);
-    }
+    uint8_t hi = _buf[i] >> 8;
+    spiwrite(hi);
+    spiwrite(_buf[i]);
   }
   tft_cs_high();
 }
